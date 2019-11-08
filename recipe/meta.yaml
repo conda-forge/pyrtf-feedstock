@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/phenix-lbl/PyRTF/archive/${{ version }}.tar.gz
+  url: https://github.com/phenix-lbl/PyRTF/archive/{{ version }}.tar.gz
   sha256: a9219f8a006a626a1ac739b860119193a9e0b874838bbcbb229c56f06e118d57
 
 build:
