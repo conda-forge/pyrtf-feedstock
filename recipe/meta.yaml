@@ -11,18 +11,20 @@ source:
 
 build:
   noarch: python
-  number: 2
+  number: 3
   script: "{{ PYTHON }} setup.py install"
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - future
   run:
-    - python
+    - python >={{ python_min }}
     - future
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - PyRTF
 
